@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/intranetcss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo/logoazul.png">
+    <title>Cadastrar Item</title>
+    </head>
+    <body>
+        <div class="conteiner">
+            <div class="row">
+    
+                <div class="col-lg-2" id="navbar">
+                    <img class="logo" src="logo/logobranca.png" alt="logo">
+    
+                    <div class="mobile-menu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+    
+                    <ul class="nav-list">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a>Inspeções</a></li>
+                        <li><a>Clientes</a></li>
+                        <li><a>Inspetores</a></li>
+                        <li><a>Tarefas</a></li>
+                        <li><a>Calendários</a></li>
+    
+                    </ul>
+                    <a class="admin" href="intranet.html">Administrador</a>
+                </div>
+
+                <div class="col-lg-10" id="intranet">
+                    <form id="store">
+                        <small>*campos obrigatórios</small>
+                        
+                        <div class="form-group">
+                            <label for="tipo">Tipo</label>
+                            <select id="tipo" name="tipo" class="form-control" required>
+                                <option disabled selected value="">Selecione o tipo de cadastro...</option>
+                                <option value="inspecaoPendente">Inspeções Pendentes</option>
+                                <option value="inspecaoFinalizada">Inspeções Finalizadas</option>
+                                <option value="certificado">Certificados</option>
+                            </select>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="cliente">Cliente</label>
+                            <input type="text" class="form-control" id="cliente" maxlength="50" name="cliente" placeholder="Informe o cliente..." required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="armazem">Armazem Responsavel</label>
+                            <input type="text" class="form-control" id="armazem" maxlength="50" name="armazem" placeholder="Informe o Armazem..." required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="produto">Produto Inspecionado</label>
+                            <input type="text" class="form-control" id="produto" maxlength="50" name="produto" placeholder="Informe o Produto..." required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="destino">Destino de Carregamento</label>
+                            <input type="text" class="form-control" id="destino" maxlength="50" name="destino" placeholder="Informe o Destino..." required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="descricoes">Descrições Extras</label>
+                            <input type="text" class="form-control" id="descricoes" maxlength="50" name="descricoes">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="data">Data da Inspeção</label>
+                            <input type="date" class="form-control" id="data" name="data" placeholder="Informe a data da inspeção..." required>
+                        </div>
+                    
+                        <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+<footer>
+    <!-- JavaScript -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="libs/bootstrap-5.1.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+</footer>
+</html>
