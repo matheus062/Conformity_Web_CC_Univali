@@ -1,2 +1,4 @@
-# Conformity_Trabalho_M2_Programacao_Web
- Trabalho M2 programação WEB
+# Página Institucional Conformity
+Trabalho de Ciencias da computação, matéria de Programação WEB.
+
+Nesse presente trabalho foi criada uma página institucional para a empresa Conformtity utilizando a framework Bootstrap. Onde a conexão do banco de dados será feita via JavaScript
