@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/Indexcss.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,22 +14,31 @@
     </head>
     <body>
         <head>
-            <nav>
-                <a class="logo" href="index.html">Conformity</a>
-                <div  class =  "mobile-menu">
-                    <div class = "line1"></div>    
-                    <div class = "line2"></div>
-                    <div class = "line3"></div>
-                
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbarSite">
+                <div class="container-fluid">
+                    <a class="logo px-4" href="index.html">Conformity</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarCollapse">
+                        <ul class="navbar-nav" id="lista">
+                            <li class="nav-item mx-3">
+                                <a class="nav-link" href="index.html">INICIO</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link" href="sobre.html">SOBRE NÓS</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link" href="suporte.html">SUPORTE</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link" href="intranet.html">INTRANET</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <ul class="nav-list">
-                    <li><a href="index.html">INICIO</a></li>
-                    <li><a href="sobre.html">SOBRE NÓS</a></li>
-                    <li><a href="suporte.html">SUPORTE</a></li>
-                    <li><a href="intranet.html">INTRANET</a></li>                
-                </ul>
             </nav>
-            
         </head>
         <main>
 
@@ -68,6 +78,7 @@
 
         </main>
         <script src="js/navBar.js"></script>
+        <script src="js/bootstrap.min.js"></script>
     </body>
 
 
