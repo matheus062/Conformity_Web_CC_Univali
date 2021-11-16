@@ -47,22 +47,20 @@
 
         <div class="principal">
             <div class="conteudo">
-                <h1>Suporte</h1>
-                <br>
-                <p>Precisa de ajuda ?</p>
-                <br>
-                <form method="post">
+                <h1 style="font-size: 40px;">Suporte</h1>
+                <p style="font-size: 24px;">Precisa de ajuda ?</p>
+                <form method="post" id="contactForm">
                     <label>Nome</label>
-                    <input type="text" id="nameForm" placeholder="Insira seu nome" required>
-
+                    <input type="text" placeholder="Insira seu nome" required id="nome" name="nome" oninvalid="this.setCustomValidity('Por favor, informe o seu nome.')" oninput="this.setCustomValidity('')">
+                    
                     <label>E-mail</label>
-                    <input type="text" id="emailForm" placeholder="Insira seu e-mail">
+                    <input type="text" placeholder="Insira seu e-mail" required id="email" name="email" oninvalid="this.setCustomValidity('Por favor, informe o seu e-mail.')" oninput="this.setCustomValidity('')">
 
                     <label>Telefone</label>
-                    <input type="text" id="telForm" placeholder="Insira seu telefone">
+                    <input type="tel" placeholder="Insira seu telefone" id="telefone" name="telefone" placeholder="Telefone" onkeypress="return MascaraTelefone(this, event);" maxlength="15">
 
                     <label>Categoria</label>
-                    <select type="" id="catForm">
+                    <select type="text" id="assunto" name="assunto" placeholder="Assunto" required oninvalid="this.setCustomValidity('Por favor, informe o assunto.')" oninput="this.setCustomValidity('')">
                         <option>Inspeção</option>
                         <option>Site</option>
                         <option>Intranet</option>
@@ -70,10 +68,9 @@
                     </select>
 
                     <label>Descrição</label>
-                    <textarea id="descricaoForm" cols="30" rows="10"
-                        placeholder="Descreva seu problema de forma mais detalhada possivel..."></textarea>
+                    <textarea cols="30" rows="10" placeholder="Descreva seu problema de forma mais detalhada possivel..." name="mensagem" id="mensagem" required oninvalid="this.setCustomValidity('Por favor, informe a mensagem.')" oninput="this.setCustomValidity('')"></textarea>
 
-                    <button type="submit" id="botao">Enviar</button>
+                    <button type="submit" value="submit" name="btnEnviar" id="botao">Enviar</button>
                 </form>
             </div>
         </div>
@@ -81,6 +78,8 @@
     </main>
     <script src="js/navBar.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/ajax_contact.js"></script>
+    <script src="/layout_default/js/funcoesGerais.js"></script>
 </body>
 
 
