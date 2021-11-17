@@ -63,7 +63,7 @@ $("#store").on("submit", function(e){
     alert("Item Adicionado!");
 
     // Redireciono o usuário para a tela de listagem
-    window.location.href = "intranet.html";
+    window.location.href = "indexIntranet.html";
 });
 
 

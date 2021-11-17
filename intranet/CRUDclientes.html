@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/intranetcss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="../logo/logoazul.png">
+    <title>Cadastrar Item</title>
+    </head>
+    <body>
+        <div class="conteiner">
+            <div class="row">
+    
+                <div class="col-lg-2" id="navbar">
+                    <img class="logo" src="../logo/logobranca.png" alt="logo">
+    
+                    <div class="mobile-menu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+    
+                    <ul class="nav-list">
+                        <li><a href="indexIntranet.html">Inicio</a></li>
+                        <li><a href="inspecoes.html">Inspeções</a></li>
+                        <li><a href="clientes.html">Clientes</a></li>
+                        <li><a href="inspetores.html">Inspetores</a></li>
+                        <li><a href="tarefas.html">Tarefas</a></li>
+                    </ul>
+                    <a class="admin" href="../index.html">Administrador</a>
+                </div>
+
+                <div class="col-lg-10" id="intranet">
+                    <form id="store">
+
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" maxlength="50" name="nome" placeholder="Informe o nome do cliente..." required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="cnpj">CNPJ</label>
+                            <input type="text" class="form-control" id="cnpj" maxlength="18" name="cnpj" placeholder="Informe o CNPJ..." required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="logradouro">Logradouro</label>
+                            <input type="text" class="form-control" id="logradouro" maxlength="100" name="logradouro" placeholder="Informe o logradouro..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" class="form-control" id="cidade" maxlength="100" name="cidade" placeholder="Informe a cidade..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="uf">UF</label>
+                            <select id="uf" name="uf" class="form-control" required>
+                                <option disabled selected value="">Selecione o UF...</option>
+                                <option value="SC">SC</option>
+                                <option value="RS">RS</option>
+                                <option value="PR">PR</option>
+                            </select>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="tel1">Telefone1</label>
+                            <input type="tel" class="form-control" id="tel1" maxlength="14" name="tel1" placeholder="Informe o Telefone 1..." required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="tel2">Telefone2</label>
+                            <input type="tel" class="form-control" id="tel2" maxlength="14" name="tel2" placeholder="Informe o Telefone 2...">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+<footer>
+    <!-- JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/navBar.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/main.js"></script>
+</footer>
+</html>

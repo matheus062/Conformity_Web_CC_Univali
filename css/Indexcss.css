@@ -17,7 +17,7 @@
 
 #navbarSite ul a{
     font-weight:600;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 1px;
     color: white;
     text-decoration:none;
@@ -38,7 +38,7 @@
     text-decoration:none;
     font-size: 24px;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 }
 
 .logo:hover{
