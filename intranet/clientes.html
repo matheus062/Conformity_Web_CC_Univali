@@ -43,8 +43,8 @@
 
                     </div>
                     <div class="col-9" id="barra_de_pesquisa">
-                        <input id="pesquisar" type="text" maxlength="100" placeholder="Pesquisar" />
-                        <button type="submit" id="pesquisa">PESQUISAR</button>
+                        <input id="pesquisar" type="text" maxlength="100" placeholder="Insira a ID do cliente" />
+                        <button onclick="getClienteByID()" type="submit" id="pesquisaButton">PESQUISAR</button>
 
                     </div>
                 </div>
@@ -70,14 +70,42 @@
 
 <script>
 
+    //Get Client by ID
+    async function getClienteByID () {
+        try {
+
+            //Var do campo de pesquisa no html
+            var idCliente =  document.getElementById('pesquisar').value
+
+            console.log("ID Cliente: " +  idCliente)
+            //Busca da Id co Cliente no  localHost
+            const response =  await fetch('http://localhost:7777/clientes/' +  idCliente)
+            
+            const data = await response.json()
+            console.log(data)
+            output = `<li> <p>Nome do Cliente: ${data.name}  </p><br><p> Email: ${data.email} </p> <p>Telefone ${data.phone}</p> </br></li>  `
+            console.log(output)
+            document.querySelector('#listaClientes').innerHTML = output
+            
+
+        }catch (error) {
+
+
+        }
+
+    }
+
+
+
+
     //Realiza chamada na porta :7777 -> Onde o sever Js está rodando
     async function getContent() {
         try {
             // const recebe retorno da unica rota do server JS
-            const  response  = await fetch('http://localhost:7777/')
+            const  response  = await fetch('http://localhost:7777/clientes')
             console.log(response)
-            const { data } = await response.json()
-            console.log(data)
+            const  data  = await response.json()
+            console.log(`Data: ${data}`)
             show(data)
 
         } catch (error) {
@@ -88,7 +116,7 @@
 
     getContent()
 
-    function show (clientes) {
+    function show(clientes) {
 
         let output = ''
         console.log("clientes")
@@ -100,6 +128,9 @@
         console.log(output)
         document.querySelector('#listaClientes').innerHTML = output
     }
+    //
+
+    
 </script>
 
 

@@ -76,6 +76,43 @@
     </div>
 </body>
 
+<script>
+    async function getInspecoes() {
+        try {
+            const inspecoes =  await fetch ('http://localhost:7777/inspecoes')
+            
+            const data = await response.json()
+            console.log(data)
+            // Show Inspecoes 
+            let completedOutput =  ''
+            let notCompleteOutput = ''   
+            for (let inspecao of data){
+                if (inpecao.completed) {
+                    completedOutput +=  `<li><p> Titulo: ${inspecao.title} </p> <br> <p> Cliente ID: ${inspecao.userId} </p> </li>`
+                }else {
+                    notCompleteOutput +=  `<li><p> Titulo: ${inspecao.title} </p> <br> <p> Cliente ID: ${inspecao.userId} </p> </li>`
+                }
+            }
+            documento.querySelector('#pendentes').innerHTML  = notCompleteOutput
+            documento.querySelector('#finalizadas').innerHTML  = completedOutput
+
+
+
+        }catch (error) {
+
+        }
+
+    }
+
+    getInspecoes()
+
+</script>
+
+
+
+
+
+
 <footer>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/navBar.js"></script>
