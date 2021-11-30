@@ -1,5 +1,7 @@
 //Libs
 //Libera as api se comunicarem
+const database = require('./intranetServer/db');
+//
 const cors = require('cors')
 //
 const express =  require('express')
@@ -12,24 +14,19 @@ const { response } = require('express')
 app.use(cors())
 
 
-//ROTAS
-
-
 // CLIENTE
 //Variaveis => id, nome, cnpj, endereco, idCidade, telefone1, telefone2
 app.get('/clientes', async(req, res) => {
     //Lista todos os clientes
-    try {
-        const { data } =  await axios('https://jsonplaceholder.typicode.com/users')
-        console.log(data)
-    
-        return res.json(data)
-
-    }catch (error){
-        console.log(error)
-    }
-
-
+        const cliente = require('./intranetServer/cliente');
+        
+        try {
+            const resultado = await database.sync();
+            const Clientes = await cliente.findAll();
+            console.log(Clientes);
+        } catch (error) {
+            console.log(error);
+        }
 
 })
 
@@ -47,7 +44,6 @@ app.get('/clientes/:id', async (req, res) => {
 
 
 })
-
 
 
 
@@ -89,7 +85,7 @@ app.get("/inspetores", async (req, res) =>{
 //
 app.get("/inspecoes", async (req, res) =>{
         const { data } =  await axios('https://jsonplaceholder.typicode.com/todos')
-        console.log(data)
+        //console.log(data)
         
         return res.json(data)
 

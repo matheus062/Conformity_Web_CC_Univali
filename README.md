@@ -18,7 +18,7 @@ Nesse presente trabalho foi criada uma página institucional para a empresa Conf
 No terminal ~/conformity-api$ npm start
 retorno esperado =>  " [nodemon] starting `node server.js` "
 
-Em outra aba do terminal:  ~/conformity-api$ npx lite-sever
+Em outra aba do terminal:  ~/conformity-api$ npx lite-server
 retono esperado => "Logs de atividades de interação do servidor"
 
 
