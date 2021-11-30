@@ -123,7 +123,7 @@
 
         for (let client of clientes) {
             console.log("sdsad")
-            output += `<li> <p>Nome do Cliente: ${client.name}  </p><br><p> Email: ${client.email} </p> <p>Telefone ${client.phone}</p> </br></li>  `
+            output += `<li> <p>Nome do Cliente: ${client.nome}  </p><br><p> Cnpj: ${client.cnpj} </p> <p>Telefone ${client.endereco}</p> </br></li>  `
         }
         console.log(output)
         document.querySelector('#listaClientes').innerHTML = output

@@ -23,7 +23,7 @@ app.get('/clientes', async(req, res) => {
         try {
             const resultado = await database.sync();
             const Clientes = await cliente.findAll();
-            console.log(Clientes);
+            return res.json(Clientes);
         } catch (error) {
             console.log(error);
         }
