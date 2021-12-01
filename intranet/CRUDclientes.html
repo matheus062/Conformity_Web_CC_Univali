@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="col-lg-10" id="intranet">
-                    <form id="store">
+                    <form action="/addclientes" method="post" id="store">
 
                         <div class="form-group">
                             <label for="nome">Nome</label>
@@ -54,16 +54,6 @@
                         <div class="form-group">
                             <label for="cidade">Cidade</label>
                             <input type="text" class="form-control" id="cidade" maxlength="100" name="cidade" placeholder="Informe a cidade..." required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="uf">UF</label>
-                            <select id="uf" name="uf" class="form-control" required>
-                                <option disabled selected value="">Selecione o UF...</option>
-                                <option value="SC">SC</option>
-                                <option value="RS">RS</option>
-                                <option value="PR">PR</option>
-                            </select>
                         </div>
                     
                         <div class="form-group">
@@ -85,6 +75,7 @@
     </body>
 <footer>
     <!-- JavaScript -->
+
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/navBar.js"></script>
     <script src="../js/jquery-3.6.0.min.js"></script>

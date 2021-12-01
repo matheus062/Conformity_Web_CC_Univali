@@ -4,6 +4,8 @@ const database = require('./intranetServer/db');
 //
 const cors = require('cors')
 //
+const bodyParser = require('body-parser')
+//
 const express =  require('express')
 //
 const app =  express()
@@ -12,6 +14,11 @@ const axios = require("axios")
 const { response } = require('express')
 
 app.use(cors())
+
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true
+}));
 
 
 // CLIENTE
@@ -44,6 +51,39 @@ app.get('/clientes/:id', async (req, res) => {
 
 
 })
+
+app.post('/addclientes', async (req, res) => {
+    try {
+    const database = require('./intranetServer/db');
+    const Cliente = require('./intranetServer/cliente');
+
+        try {
+            const resultado = await database.sync();
+            Cliente.create({
+                nome: req.body.nome,
+                cnpj: req.body.cnpj,
+                endereco: req.body.logradouro,
+                cidade: req.body.cidade,
+                telefone1: req.body.tel1,
+                telefone2: req.body.tel2
+            })
+            console.log(resultado);
+        } catch (error) {
+            console.log(error);
+        }
+
+        const resultadoCreate = await Cliente.create({
+            req
+        })
+        console.log(resultadoCreate);
+    }catch(error) {
+        console.log(error);
+    }
+})
+
+
+
+
 
 
 

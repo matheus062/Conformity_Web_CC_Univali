@@ -1,5 +1,7 @@
+
 (async () => {
     const database = require('./db');
+
     const Cliente = require('./cliente');
 
     try {
